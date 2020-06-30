@@ -1,0 +1,55 @@
+// ## Colors
+
+// ### Primary
+
+$cyan: hsl(180, 66%, 49%);
+$darkViolet: hsl(257, 27%, 26%);
+
+// ### Secondary
+
+$red: hsl(0, 87%, 67%);
+
+// ### Neutral
+
+$Gray: hsl(0, 0%, 75%);
+$grayishViolet: hsl(257, 7%, 63%);
+$veryDarkBlue: hsl(255, 11%, 22%);
+$veryDarkViolet: hsl(260, 8%, 14%);
+
+.bottom{
+    color:white;
+    padding:40px 0;
+    text-align:center;
+    background-color:$darkViolet;
+    background-image:url('./images/bg-boost-desktop.svg');
+    button{
+        margin-top:20px;
+        border-radius:30px;
+        color:white;
+        width:140px;
+        background:$cyan;
+        border-style:none;
+        font-weight:700;
+        height:40px;
+        &:hover{
+            background-color:hsl(180, 71%, 73%);
+        }
+    }
+}
+
+@media only screen and (max-width:375px){
+    .bottom{
+        color:white;
+        padding:80px 0;
+        text-align:center;
+        background-color:$darkViolet;
+        background-image:url('./images/bg-boost-mobile.svg');
+        button{
+            width:160px;
+            height:50px;
+        }
+        h1{
+            font-size:30px;
+        }
+    }
+}

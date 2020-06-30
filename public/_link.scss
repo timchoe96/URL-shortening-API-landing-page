@@ -1,0 +1,82 @@
+// ## Colors
+
+// ### Primary
+
+$cyan: hsl(180, 66%, 49%);
+$darkViolet: hsl(257, 27%, 26%);
+
+// ### Secondary
+
+$red: hsl(0, 87%, 67%);
+
+// ### Neutral
+
+$Gray: hsl(0, 0%, 75%);
+$grayishViolet: hsl(257, 7%, 63%);
+$veryDarkBlue: hsl(255, 11%, 22%);
+$veryDarkViolet: hsl(260, 8%, 14%);
+
+
+.link{
+    
+    margin-top:20px;
+    border-radius:10px;
+    width: 90vw;
+    background:white;
+    padding:20px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    .originalLink{
+        width:800px;
+        white-space: nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+    .rightSide{
+        display:flex;
+        align-items: center;
+        .shortenedLink{
+            color:$cyan;
+        }
+        button{
+            margin-left:20px;
+            color:white;
+            background:$cyan;
+            border-style:none;
+            font-weight:700;
+            height:40px;
+            width:100px;
+            border-radius:5px;
+            &:hover{ 
+                background-color:hsl(180, 71%, 73%);
+            }
+        }
+    }
+   
+}
+
+@media only screen and (max-width:375px){
+    .link{
+        padding:20px 0;
+        justify-content: center;
+        flex-wrap:wrap;
+        .originalLink{
+         width:95%;
+        }
+        .rightSide{
+            margin-top:20px;
+            border-top:1px solid $Gray;
+            flex-wrap:wrap;
+            width:95%;
+            
+            .shortenedLink{
+                margin: 10px 0;
+            }
+            button{
+                width:100%;
+                margin-left:0;
+            }
+        }
+    }
+}

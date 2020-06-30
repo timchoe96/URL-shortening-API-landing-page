@@ -1,0 +1,81 @@
+// ## Colors
+
+// ### Primary
+
+$cyan: hsl(180, 66%, 49%);
+$darkViolet: hsl(257, 27%, 26%);
+
+// ### Secondary
+
+$red: hsl(0, 87%, 67%);
+
+// ### Neutral
+
+$Gray: hsl(0, 0%, 75%);
+$grayishViolet: hsl(257, 7%, 63%);
+$veryDarkBlue: hsl(255, 11%, 22%);
+$veryDarkViolet: hsl(260, 8%, 14%);
+
+.footer{
+    background:$veryDarkViolet;
+    color:white;
+  display:flex;
+  justify-content: space-between;
+  padding:50px 50px 50px;
+img{
+    align-self:flex-start;
+}
+
+    .right{
+        display:flex;
+        width:70%;
+        justify-content: space-evenly;
+        h5{
+            margin-bottom:20px;
+        }
+        ul{
+            list-style:none;
+            color:$grayishViolet;
+            li{
+                margin-bottom:10px;
+                font-size:18px;
+                &:hover{
+                    color:$cyan;
+                    
+                }
+            }
+        }
+        .icons{
+            img{
+                margin-right:20px;
+                }
+            }
+        }
+    }
+
+
+@media only screen and (max-width:375px){
+    .footer{
+        
+        flex-wrap:wrap;
+        justify-content: center;
+        text-align: center;
+    .right{
+        flex-wrap:wrap;
+        justify-content: center;
+        h5{
+            margin-bottom:30px;
+            margin-top:50px;
+        }
+        .icons{
+            margin-top:50px;
+            width:100%;
+            display:flex;
+            justify-content: space-evenly;
+            img{
+                margin-right:0;
+            }
+        }
+    }
+    }
+}

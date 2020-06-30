@@ -1,0 +1,95 @@
+// ## Colors
+
+// ### Primary
+
+$cyan: hsl(180, 66%, 49%);
+$darkViolet: hsl(257, 27%, 26%);
+
+// ### Secondary
+
+$red: hsl(0, 87%, 67%);
+
+// ### Neutral
+
+$Gray: hsl(0, 0%, 75%);
+$grayishViolet: hsl(257, 7%, 63%);
+$veryDarkBlue: hsl(255, 11%, 22%);
+$veryDarkViolet: hsl(260, 8%, 14%);
+
+
+
+
+.navigation{
+    .navbar-light .navbar-nav .nav-link{
+        color:$grayishViolet;
+    }
+    img{
+        margin-right:20px;
+    }
+    margin: 20px 100px 0;
+    .hoverText{
+        color:$grayishViolet;
+        font-weight:700;
+        margin-right:20px;
+        &:hover{
+            color:black;
+        }
+    }
+    .signUp{
+        border-radius:30px;
+        color:white;
+        width:100px;
+        background:$cyan;
+        border-style:none;
+        font-weight:700;
+        height:40px;
+        &:hover{
+            background-color:hsl(180, 71%, 73%);
+        }
+    }
+}
+
+@media only screen and (max-width:990px){
+   .navigation{
+    .navbar-light .navbar-nav .nav-link{
+        color:white;
+    }
+       .navCollapse{
+           margin-top:20px;
+           background-color:$darkViolet;
+           text-align: center;
+           border-radius:20px;
+           padding:20px 0;
+           .hoverText{
+               color:white;
+               margin-right:0;
+               margin-bottom:20px;
+           }
+           .Login{
+            border-top:1px solid $grayishViolet;
+            width:90%;
+            display:inline-block;
+            margin-top:10px;
+            padding-top: 20px;;
+           }
+           .signUp{
+              height:60px;
+               margin-right:0;
+               margin-bottom:20px;
+               width:90%;
+           }
+       }
+   }
+}
+
+@media only screen and (max-width:375px){
+    .navigation{
+        margin:20px 0 0;
+        .navCollapse{
+            .signUp{
+                height:60px;
+            }
+        }
+    }
+}
+

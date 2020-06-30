@@ -1,0 +1,201 @@
+// ## Colors
+
+// ### Primary
+
+$cyan: hsl(180, 66%, 49%);
+$darkViolet: hsl(257, 27%, 26%);
+
+// ### Secondary
+
+$red: hsl(0, 87%, 67%);
+
+// ### Neutral
+
+$Gray: hsl(0, 0%, 75%);
+$grayishViolet: hsl(257, 7%, 63%);
+$veryDarkBlue: hsl(255, 11%, 22%);
+$veryDarkViolet: hsl(260, 8%, 14%);
+
+.submit{
+    background:hsl(250, 17%, 93%);
+    margin-top:150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .submitSection{
+        margin-top:-70px;
+        width: 90%;
+        background-image:url('./images/bg-shorten-desktop.svg');
+        background-color:$darkViolet;
+        display:flex;
+        justify-content: center;
+        border-radius:10px;
+        
+        .submitLink{
+            position:relative;
+            .error{
+                color:hsl(0, 87%, 67%);
+                position:absolute;
+                bottom:20px;
+                left:0;   
+            }
+           input{
+               width:800px;
+               height:50px;
+               border-radius: 5px;
+                margin:50px 0;
+                &::placeholder{
+                    padding-left:10px;
+                }
+
+           }
+           .input{
+            &::placeholder{
+                color:$red;
+            }
+        }
+           button{
+            color:white;
+            background:$cyan;
+            border-style:none;
+            font-weight:700;
+            height:50px;
+            width:150px;
+            border-radius:5px;
+            margin-left:10px;
+            &:hover{
+                background-color:hsl(180, 71%, 73%);
+            }
+           }
+        }
+    }
+ 
+    .top{
+        text-align: center;
+        width:540px;
+        margin:auto;
+        margin-top:100px;
+        h1{
+            font-weight:700;
+        }
+        p{
+            font-size:18px;
+            color:$veryDarkViolet;
+            line-height: 1.8;
+        }
+    }
+    .stats{
+        margin-bottom:150px;
+        display:flex;
+        margin-top:150px;
+        height:400px;
+        justify-content: center;
+        .cyanLine{
+            height:10px;
+            background:$cyan;
+            width:30px;  
+            align-self:center; 
+        }
+        .detailed{
+            align-self:center;
+        }
+
+        .fully{
+        align-self: flex-end;
+        }
+        .box{
+            padding:30px;
+            background:white;
+            border-radius: 5px;
+            width:400px;
+            height:300px;
+            div{
+                margin-top:-70px;
+                background:$veryDarkBlue;
+                height:80px;
+                width:80px;
+                border-radius: 50%;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+            h4{
+                font-weight:700;
+                margin-top:20px;
+            }
+            p{
+                width:350px;
+                margin-top: 20px;
+                line-height: 1.8;
+                font-size:18px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:375px){
+    .submit{
+        padding-bottom:250px;
+        .submitSection{
+            display:block;
+            text-align: center;
+            background-image:url('./images/bg-shorten-mobile.svg') no-repeat 100%;
+            background-color:$veryDarkViolet;
+            .submitLink{
+                .error{
+                    color:hsl(0, 87%, 67%);
+                    position:static; 
+                    margin-right:160px; 
+                    font-size:14px; 
+                    
+                }
+                input{
+                    width:90%;
+                   margin-bottom:0;
+                    margin-top:20px;
+                }
+                button{
+                    width:90%;
+                    margin-left:0;
+                    margin-bottom:20px;
+                    margin-top:20px;
+                }
+            }
+        }
+        .top{
+            width:90%;
+        }
+
+        .stats{
+            align-items:center;
+            height:800px;
+            margin-top:100px;
+           display:block;
+           
+        .cyanLine{
+            border-top:6px solid $cyan;
+            width:10px; 
+            height:100px;
+            margin-bottom:50px;
+            margin:auto;
+        }  
+            .fully{
+            align-self: center;
+            } 
+
+            .box{
+                display:flex;
+                flex-direction:column;
+                align-items: center;
+                text-align: center;
+                width:90%;
+                margin:auto;
+                p{
+                    width:300px;
+                    font-size:14px;
+                }
+            }
+        }
+    }
+   
+}
